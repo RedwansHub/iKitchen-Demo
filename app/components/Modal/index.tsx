@@ -48,7 +48,7 @@ const Modal = ({modal, programs}: Props) => {
       xMoveCursorLabel(pageX)
       yMoveCursorLabel(pageY)
     })
-  }, [window])
+  }, [])
 
   return (
     <>
