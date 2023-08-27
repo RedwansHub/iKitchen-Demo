@@ -47,7 +47,7 @@ const Subscription = (props: Props) => {
         } else {
             subControls.start('hidden')
         }
-    }, [subView])
+    }, [subView, subControls])
   return (
     <motion.div ref={container}  className={styles.subscription}>
         <div className='w-full z-20 h-full p-20 px-28'>

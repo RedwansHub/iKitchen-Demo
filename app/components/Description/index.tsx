@@ -7,13 +7,13 @@ import { slideUp, opacity } from './animate'
 import Rounded from '@/app/common/Rounded/Rounded';
 import Image from 'next/image';
 
-export default function index() {
+type Props = {}
 
+const Description = (props: Props) => {
+  
     const Phrase = "Helping brands to stand out in the digital era. Together we will set the new status quo. No nonsense, always on the cutting edge.";
-    const description = useRef<HTMLDivElement>(null);;
-    const descImage = useRef<HTMLDivElement>(null);;
-    const isInView = useInView(description)
-    const isInView2 = useInView(descImage)
+    const DescRef = useRef<HTMLDivElement>(null);;
+    const isInView = useInView(DescRef)
     const imageVariant = {
         hidden: {
             y: -50,
@@ -44,7 +44,7 @@ export default function index() {
     }
 
     return (
-        <div ref={description} className={styles.description}>
+        <div ref={DescRef} className={styles.description}>
             <div className={styles.body}>
                 <div className='flex flex-col w-full'>
                     <p>
@@ -73,3 +73,5 @@ export default function index() {
         </div>
     )
 }
+
+export default Description
