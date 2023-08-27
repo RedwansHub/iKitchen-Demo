@@ -35,7 +35,7 @@ const Curve = (props: Props) => {
 
     setInitialPath(initialPathValue);
     setTargetPath(targetPathValue);
-  }, []);
+  }, [windowHeight]);
 
   const curve = {
     initial: {
