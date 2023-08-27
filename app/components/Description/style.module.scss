@@ -1,0 +1,73 @@
+.description{
+  padding-left: 200px;
+  padding-right: 200px;
+  margin-top: 200px;
+  display: flex;
+  justify-content: center;
+  .body{
+      max-width: 1400px;
+      display: flex;
+      gap: 50px;
+      position: relative;
+      p{
+          margin: 0px;
+          max-width: 100%;
+          &:nth-of-type(1){
+              font-size: 36px;
+              gap: 8px;
+              line-height: 1.3;
+              span{
+                  margin-right: 3px;
+              }
+              .mask{
+                  position: relative;
+                  overflow: hidden;
+                  display: inline-flex;
+              }
+          }
+          &:nth-of-type(2){
+              font-size: 18px;
+              width: 80%;
+              font-weight: 300;
+          }
+      }
+      .button{
+          right: calc(100% - 100px); 
+          width: 130px;
+          height: 130px;
+          
+          position: absolute;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          backdrop-filter: blur(20px); /* Apply a blur to create the glass effect */
+          transition: background-color 0.3s ease-in-out;
+           
+            p{
+                font-size: 16px;
+                font-weight: 300;
+                position: relative;
+                z-index: 1;
+            }
+      }
+      .moreButton {
+        display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+
+          p {
+            font-size: 18px;
+            font-weight: 400;
+            position: relative;
+            z-index: 1;
+            }
+      }
+  }
+  .moreWork{
+      padding: 20px;
+      border-radius: 40px;
+      border: 1px solid grey;
+  }
+}

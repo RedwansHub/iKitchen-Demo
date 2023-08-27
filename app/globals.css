@@ -2,26 +2,136 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+
+
+.main{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    align-items: center;
+    padding-top: 100px;
+    padding-bottom: 200px;
+    justify-content: center;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.programsContainer {
+    margin-top: 200px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    padding-left: 200px;
+    padding-right: 200px;
+    display: flex;
+    gap: 20px;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.programsbody{
+    width: 600px;
+}
+
+.Program{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px 20px 20px;
+    border-top: 1px solid rgb(201, 201, 201);
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.Program:last-of-type{
+    border-bottom: 1px solid rgb(230, 230, 230);
+}
+
+.Program:hover{
+    background-color: rgba(0, 168, 120, 0.2);
+}
+
+.Program:hover h2{
+    transform: translateX(-5px);
+}
+
+.Program:hover p{
+    transform: translateX(10px);
+}
+
+.Program h2{
+    font-size: 18px;
+    margin: 0px;
+    font-weight: 500;
+    transition: all 0.4s;
+}
+
+.Program p{
+    transition: all 0.4s;
+    font-weight: 300;
+}
+
+.modalContainer{
+    height: 350px;
+    width: 400px;
+    position: absolute;
+    background-color: white;
+    overflow: hidden;
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modalSlider{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transition: top 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.modal{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal img{
+    height: auto;
+}
+
+.cursor, .cursorLabel{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #e94592;
+    color: white;
+    position: absolute;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 300;
+    pointer-events: none;
+}
+
+.cursorLabel{
+    background-color: transparent;
+}
+
+.bgContainer {
+    /* Adjust the background container's position */
+    top: 0;
+    left: 0;
+    
+    /* Adjust the background container's size */
+    width: 30%;
+    height: 70%;
+    
+    /* Add your desired background color */
+    background-color: #ccc;
+    
+    /* Add any other styles you want for the background container */
+    border-radius: 0 0 30px 0; /* For example, rounded bottom-right corner */
+    opacity: 0.5; /* You can adjust the opacity */
+    
+    /* Add any additional positioning or styling properties */
 }
