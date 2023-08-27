@@ -27,7 +27,7 @@ const Curve = (props: Props) => {
     return () => {
       window.removeEventListener('resize', updateWindowHeight);
     };
-  }, []);
+  }, [windowHeight]);
   
   useEffect(() => {
     const initialPathValue = `M100 0 L100 ${windowHeight} Q-100 ${windowHeight / 2} 100 0`;
