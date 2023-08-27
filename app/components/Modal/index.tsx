@@ -24,9 +24,9 @@ type Props = {
 const Modal = ({modal, programs}: Props) => {
 
   const { active, index } = modal;
-  const modalContainer = useRef(null);
-  const cursor = useRef(null);
-  const cursorLabel = useRef(null);
+  const modalContainer = useRef<HTMLDivElement>(null);;
+  const cursor = useRef<HTMLDivElement>(null);;
+  const cursorLabel = useRef<HTMLDivElement>(null);;
 
   useEffect( () => {
     //Move Container
@@ -48,7 +48,7 @@ const Modal = ({modal, programs}: Props) => {
       xMoveCursorLabel(pageX)
       yMoveCursorLabel(pageY)
     })
-  }, [])
+  }, [window])
 
   return (
     <>

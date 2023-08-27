@@ -47,7 +47,7 @@ const Subscription = (props: Props) => {
         } else {
             subControls.start('hidden')
         }
-    })
+    }, [subView])
   return (
     <motion.div ref={container}  className={styles.subscription}>
         <div className='w-full z-20 h-full p-20 px-28'>
@@ -81,7 +81,7 @@ const Subscription = (props: Props) => {
                             <motion.div key={side.id}
                                 className='grid col-span-3 grid-cols-3 gap-4'>
                                 {side.data.map( (item, index) => (
-                                    <motion.div initial='hidden' animate={subControls} custom={index} variants={subVariants} transition={{ duration: 1, delay: 0.4 * index  }}>
+                                    <motion.div key={index} initial='hidden' animate={subControls} custom={index} variants={subVariants} transition={{ duration: 1, delay: 0.4 * index  }}>
                                         <div className={`border-2  shadow-xl rounded-lg p-2 flex flex-col ${item.name === 'Gold' ? 'bg-[#0B3E2F] text-white' : ''}`}>
                                             <div className=' p-4 font-semibold text-2xl '>
                                                 <h2>{item.name}</h2>

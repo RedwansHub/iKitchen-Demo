@@ -10,8 +10,8 @@ import Image from 'next/image';
 export default function index() {
 
     const phrase = "Helping brands to stand out in the digital era. Together we will set the new status quo. No nonsense, always on the cutting edge.";
-    const description = useRef(null);
-    const descImage = useRef(null);
+    const description = useRef<HTMLDivElement>(null);;
+    const descImage = useRef<HTMLDivElement>(null);;
     const isInView = useInView(description)
     const isInView2 = useInView(descImage)
     const imageVariant = {
